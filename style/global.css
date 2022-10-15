@@ -1,8 +1,9 @@
 :root {
     --cor-background: #FFF8EA;
-    --cor-fonte: #594545;
-    --botao-iniciar: #B7CADB;
-    --botao-pause: #F68989;
-    --botao-reiniciar: #F9CF93;
+    --cor-numero: #594545;
+    --botao-iniciar: #5F939A;
+    --botao-pause: #9C3D54;
+    --botao-reiniciar: #E2BCB7;
+    --borda: #4B6587;
 
 }
