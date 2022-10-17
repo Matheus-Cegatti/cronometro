@@ -57,6 +57,7 @@ body{
     border: 1.5px solid var(--borda);
     border-radius: 20px;
     cursor: pointer;
+    color: #310B0B;
 
 }
 
