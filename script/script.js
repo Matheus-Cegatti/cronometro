@@ -2,4 +2,11 @@ var sec = 0;
 var min = 0;
 var hour = 0;
 
-let btnIniciar = document.getElementsByClassName("btn-iniciar");
+var btnIniciar = document.querySelector(".btn-iniciar");
+
+console.log(btnIniciar);
+
+
+btnIniciar.addEventListener("click", function(){
+    console.log("clicou");
+})
