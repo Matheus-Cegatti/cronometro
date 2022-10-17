@@ -16,6 +16,7 @@ btnIniciar.addEventListener("click", function(){
 
 btnPause.addEventListener("click", function(){
     console.log("pausou");
+    pausar()
 })
 
 btnReiniciar.addEventListener("click", function(){
@@ -49,3 +50,8 @@ function iniciar() {
     cronometoro();
     intervalo = setInterval(cronometoro, 1000)
 }
+
+function pausar(){
+    clearInterval(intervalo)
+}
+
