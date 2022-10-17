@@ -21,6 +21,7 @@ btnPause.addEventListener("click", function(){
 
 btnReiniciar.addEventListener("click", function(){
     console.log("Reiniciou");
+    resetar()
 })
 
 function doisDigitos(digito){
@@ -55,3 +56,11 @@ function pausar(){
     clearInterval(intervalo)
 }
 
+function resetar(){
+    sec = 0;
+    min = 0;
+    hour = 0
+
+    document.querySelector(".tempo").innerText = "00:00:00"
+    pausar()
+}
