@@ -6,61 +6,75 @@ var btnIniciar = document.querySelector(".btn-iniciar");
 var btnPause = document.querySelector(".btn-pausar");
 var btnReiniciar = document.querySelector(".btn-reiniciar");
 
+
 console.log(btnIniciar);
 
 
-btnIniciar.addEventListener("click", function(){
-    console.log("clicou");
+btnIniciar.addEventListener("click", function () {
     iniciar()
 });
 
-btnPause.addEventListener("click", function(){
+btnPause.addEventListener("click", function () {
     console.log("pausou");
     pausar()
 })
 
-btnReiniciar.addEventListener("click", function(){
+btnReiniciar.addEventListener("click", function () {
     console.log("Reiniciou");
     resetar()
+    if(sec == 0){
+        btnIniciar.disabled = false;
+        console.log(sec);
+    }
 })
 
-function doisDigitos(digito){
-    if(digito <10){
-        return("0" + digito)
-    }else {
-        return(digito)
+function doisDigitos(digito) {
+    if (digito < 10) {
+        return ("0" + digito)
+    } else {
+        return (digito)
     }
 }
 
 
-function cronometoro() {
+function cronometro() {
     sec++
-    if(sec == 60){
+    if (sec == 60) {
         min++
         sec = 0
-        if(min == 60) {
+        if (min == 60) {
             hour++
             min = 0
         }
     }
 
-    document.querySelector(".tempo").innerText = doisDigitos(hour)+ ":" + doisDigitos(min) + ":" + doisDigitos(sec)
+    document.querySelector(".tempo").innerText = doisDigitos(hour) + ":" + doisDigitos(min) + ":" + doisDigitos(sec)
 };
 
-function iniciar() {
-    cronometoro();
-    intervalo = setInterval(cronometoro, 1000)
-}
 
-function pausar(){
+function pausar() {
     clearInterval(intervalo)
+
+   
 }
 
-function resetar(){
+function resetar() {
     sec = 0;
     min = 0;
     hour = 0
 
+    
+
     document.querySelector(".tempo").innerText = "00:00:00"
     pausar()
+}
+
+function iniciar() {
+    cronometro();
+    intervalo = setInterval(cronometro, 1000);
+    console.log(sec);
+    if(sec >= 1){
+        btnIniciar.disabled = true;
+        console.log("SEGUNDO MAIOR");
+    }
 }
