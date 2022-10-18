@@ -55,7 +55,9 @@ function cronometro() {
 function pausar() {
     clearInterval(intervalo)
 
-   
+    if(pausar){
+        btnIniciar.disabled = false;
+    }
 }
 
 function resetar() {
