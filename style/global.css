@@ -1,13 +1,13 @@
 :root {
 
     --background-dark:#2b2d42;
-    --numero-dark: #F3E9DD;
+    --numero-dark: #edf2f4;
     --iniciar-dark: #15616d;
     --pause-dark: #911F27;
     --reiniciar-dark: #4B6587;
     --borda-dark:#403d39;
     --borda-visor--dark: #cce3de;
-    --visor-dark: linear-gradient(120deg, rgba(43,45,66,0.8) 40%, rgba(237,237,233,1) 46%, rgba(43,45,66,1) 82%);
+    --visor-dark: linear-gradient(120deg, rgba(38,70,83,0.8) 40%, rgba(0,119,182,1) 46%, rgba(38,70,83,1) 82%);
 
     --cor-background: #FFF8EA;
     --cor-numero: #594545;
@@ -17,5 +17,6 @@
     --borda-clean: #4B6587;
     --borda-visor-clean: #D8CCA3;
     --visor-clean: linear-gradient(120deg, rgba(220,215,201,0.8) 40%, rgba(248,237,227,1) 46%, rgba(220,215,201,1) 82%);
+
 
 }
