@@ -6,15 +6,37 @@
 }
 
 body{
-    background-color: var(--cor-background);
-    color: var(--cor-numero);
+    background-color: var(--background-color);
+    color: var(--numeros);
+}
+
+.dark {
+    --background-color: var(--background-dark);
+    --numeros: var(--numero-dark);
+    --btn-iniciar: var(--iniciar-dark);
+    --btn-pause: var(--pause-dark);
+    --btn-reset: var(--reiniciar-dark);
+    --borda: var(--borda-dark);
+    --borda-visor: var(--borda-visor--dark);
+    --visor:var(--visor-dark);
+}
+
+.clean {
+    --background-color: var(--cor-background);
+    --numeros: var(--cor-numero);
+    --btn-iniciar: var(--botao-iniciar);
+    --btn-pause: var(--botao-pause);
+    --btn-reset: var(--botao-reiniciar);
+    --borda: var(--borda-clean);
+    --borda-visor: var(--borda-visor-clean);
+    --visor: var(--visor-clean);
 }
 
 .tempo {
     margin-bottom: 1rem;
     font-weight: 700;
     font-size: 3.5rem;
-    background: linear-gradient(120deg, rgba(220,215,201,0.8) 40%, rgba(248,237,227,1) 46%, rgba(220,215,201,1) 82%);
+    background: var(--visor);
     padding: 1.5rem;
     border: 1.5px solid var(--borda-visor);
     box-shadow: 2px 4px 3px 3px rgba(0, 0, 0, 0.2);
@@ -31,15 +53,15 @@ body{
 }
 
 .btn-iniciar {
-    background-color: var(--botao-iniciar);
+    background-color: var(--btn-iniciar);
 }
 
 .btn-pausar{
-    background-color: var(--botao-pause);
+    background-color: var(--btn-pause);
 }
 
 .btn-reiniciar {
-    background-color: var(--botao-reiniciar);
+    background-color: var(--btn-reset);
 }
 
 .btn-iniciar:hover,
@@ -66,6 +88,15 @@ body{
 
 }
 
+.botoes{
+    margin-bottom: 1.5rem;
+}
+
 .botoes button:not(:last-child){
     margin-right: 1.5rem;
+}
+
+.img-dark{
+    width: 2.5%;
+    cursor: pointer;
 }
