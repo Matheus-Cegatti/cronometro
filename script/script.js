@@ -5,6 +5,7 @@ var hour = 0;
 var btnIniciar = document.querySelector(".btn-iniciar");
 var btnPause = document.querySelector(".btn-pausar");
 var btnReiniciar = document.querySelector(".btn-reiniciar");
+var btnDark = document.querySelector(".img-dark");
 
 
 console.log(btnIniciar);
@@ -80,3 +81,8 @@ function iniciar() {
         console.log("SEGUNDO MAIOR");
     }
 }
+
+btnDark.addEventListener("click", () => {
+    document.querySelector("body").classList.toggle("dark");
+    document.querySelector("body").classList.toggle("clean");
+})
