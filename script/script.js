@@ -6,6 +6,7 @@ var btnIniciar = document.querySelector(".btn-iniciar");
 var btnPause = document.querySelector(".btn-pausar");
 var btnReiniciar = document.querySelector(".btn-reiniciar");
 var btnDark = document.querySelector(".img-dark");
+var barraProgresso = document.querySelector(".barra-progresso");
 
 
 console.log(btnIniciar);
@@ -75,6 +76,7 @@ function resetar() {
 function iniciar() {
     cronometro();
     intervalo = setInterval(cronometro, 1000);
+    barraProgresso.classList.add("animacao")
     console.log(sec);
     if(sec >= 1){
         btnIniciar.disabled = true;
