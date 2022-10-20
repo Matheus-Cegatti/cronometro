@@ -5,7 +5,7 @@
     font-family: 'Kufam', sans-serif;
 }
 
-body{
+body {
     background-color: var(--background-color);
     color: var(--numeros);
 }
@@ -18,7 +18,7 @@ body{
     --btn-reset: var(--reiniciar-dark);
     --borda: var(--borda-dark);
     --borda-visor: var(--borda-visor--dark);
-    --visor:var(--visor-dark);
+    --visor: var(--visor-dark);
 }
 
 .clean {
@@ -44,19 +44,29 @@ body{
 }
 
 .visor {
-   width: 100vw;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.barra-progresso {
+    height: 10.5px;
+    background-color: black;
+    border: 1.5px solid white;
+    border-radius: 15px;
+    position: absolute;
+    top: 46%;
+    left: 40%;
 }
 
 .btn-iniciar {
     background-color: var(--btn-iniciar);
 }
 
-.btn-pausar{
+.btn-pausar {
     background-color: var(--btn-pause);
 }
 
@@ -66,7 +76,7 @@ body{
 
 .btn-iniciar:hover,
 .btn-pausar:hover,
-.btn-reiniciar:hover{
+.btn-reiniciar:hover {
     box-shadow:
         1px 1px #30475E,
         2px 2px #30475E,
@@ -76,7 +86,7 @@ body{
 
 .btn-iniciar,
 .btn-pausar,
-.btn-reiniciar{
+.btn-reiniciar {
     height: 4rem;
     width: 8.2rem;
     font-weight: 700;
@@ -88,15 +98,32 @@ body{
 
 }
 
-.botoes{
+.botoes {
     margin-bottom: 1.5rem;
 }
 
-.botoes button:not(:last-child){
+.botoes button:not(:last-child) {
     margin-right: 1.5rem;
 }
 
-.img-dark{
+.img-dark {
     width: 2.5%;
     cursor: pointer;
+}
+
+@keyframes progresso {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 20%;
+    }
+}
+
+.animacao {
+    animation-name: progresso;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
 }
