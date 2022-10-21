@@ -19,6 +19,7 @@ btnIniciar.addEventListener("click", function () {
 btnPause.addEventListener("click", function () {
     console.log("pausou");
     pausar()
+    barraProgresso.classList.add("pausar")
 })
 
 btnReiniciar.addEventListener("click", function () {
@@ -28,6 +29,9 @@ btnReiniciar.addEventListener("click", function () {
         btnIniciar.disabled = false;
         console.log(sec);
     }
+
+    barraProgresso.classList.remove("animacao");
+    void barraProgresso.offsetWidth;
 })
 
 function doisDigitos(digito) {
@@ -76,7 +80,8 @@ function resetar() {
 function iniciar() {
     cronometro();
     intervalo = setInterval(cronometro, 1000);
-    barraProgresso.classList.add("animacao")
+    barraProgresso.classList.add("animacao");
+    barraProgresso.classList.remove("pausar")
     console.log(sec);
     if(sec >= 1){
         btnIniciar.disabled = true;
