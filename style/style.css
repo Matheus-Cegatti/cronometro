@@ -132,4 +132,25 @@ body {
 
 .pausar {
     animation-play-state: paused;
-  }
+}
+
+@media screen and (max-width: 850px) {
+
+    .barra-progresso {
+        top: 1rem;
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botoes button:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    .img-dark {
+        width: 10%;
+    }
+
+}
